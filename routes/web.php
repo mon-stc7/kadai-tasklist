@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//TopページをTasksControllerのindexアクションに設定
+Route::get('/', 'TasksController@index');
+
+//7つの基本ルーティングの省略形
+Route::resource('tasks', 'TasksController');
